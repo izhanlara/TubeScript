@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { SectionHeaderComponent } from '@sections/section-header/section-header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrls: ['./app.scss'],
+  imports: [SectionHeaderComponent]
 })
 export class App {
   protected readonly title = signal('TubeScript');

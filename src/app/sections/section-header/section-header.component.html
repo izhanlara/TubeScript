@@ -1,0 +1,16 @@
+<section class="s-header">
+    @if(LOGO){
+        <img class="s-header__logo" src="{{ LOGO }}" alt="TubeSript Logo" />
+    }
+    <nav class="s-header__nav">
+    @if(HEADER_ITEMS; as headerItems){
+        @for(elements of headerItems; track $index){
+            <ul>
+                <li class="s-header__nav-elements">
+                    <a href="{{ elements.route }}">{{ elements.title }}</a>
+                </li>
+            </ul>
+        }
+    }
+    </nav>
+</section>
